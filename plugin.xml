@@ -57,25 +57,40 @@
     <source-file src="libs/android/BaiduLBS_Android.jar" target-dir="libs" />
   </platform>
 
-    <!-- ios
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="BaiduPush">
-                <param name="ios-package" value="BaiduPushPlugin"/>
-            </feature>
-        </config-file>
-        
-        <header-file src="src/ios/BaiduPushPlugin.h" />
-        <source-file src="src/ios/BaiduPushPlugin.m" /> -->
+  <!-- ios -->
+  <platform name="ios">
+      <config-file parent="/*" target="config.xml">
+        <feature name="BaiduLocation">
+          <param name="ios-package" value="BaiduLocation" />
+        </feature>
+      </config-file>
 
-      <!-- Wechat Official
-      <header-file src="libs/ios/BPush.h" />
-      <source-file src="libs/ios/libBPush.a" framework="true" /> -->
+      <!--Operation-->
+      <header-file src="src/ios/BaiduLocation.h"/>
+      <source-file src="src/ios/BaiduLocation.m"/>
 
-      <!-- Other required frameworks
-      <framework src="libz.dylib" />
-      <framework src="Foundation.framework" />
-      <framework src="CoreTelephony.framework" />
-      <framework src="SystemConfiguration.framework" />
-    </platform> -->
+      <framework src="libs/ios/BaiduMapAPI_Base.framework" custom="true"/>
+      <framework src="libs/ios/BaiduMapAPI_Location.framework" custom="true"/>
+      <framework src="libs/ios/BaiduMapAPI_Utils.framework" custom="true"/>
+
+      <framework src="CoreLocation.framework" />
+      <framework src="JavaScriptCore.framework" />
+      <framework src="CoreFoundation.framework" />
+      <resource-file src="src/ios/BaiduSDKParams.plist"/>
+      <config-file target="*BaiduSDKParams.plist" parent="params">
+            <dict>
+              <key>API_KEY</key>
+              <string>$API_KEY_IOS</string>
+            </dict>
+      </config-file>
+      <!-- Set message displayed when app requests constant location updates -->
+      <config-file platform="ios" target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+        <string>此应用将一直获取您的位置信息。</string>
+      </config-file>
+
+    <!-- Set message displayed when app requests foreground location updates -->
+      <config-file platform="ios" target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+        <string>此应用将在使用期间获取您的位置信息。</string>
+      </config-file>
+  </platform>
 </plugin>
