@@ -24,3 +24,5 @@ description: cordova-plugin-geolocation定位在android上有时会定位失败�
                 alert(JSON.stringify(e));
               });
         }
+## ios build失败
+![image](http://github.com/itmyhome2013/readme_add_pic/raw/master/images/nongshalie.jpg)		
