@@ -7,7 +7,7 @@ description: cordova-plugin-geolocation定位在android上有时会定位失败�
 
 ## Installation
 
-    申请密钥 请参照：申请密钥Android定位SDK
+    申请密钥 请参照：[申请密钥Android定位SDK](http://developer.baidu.com/map/index.php?title=android-locsdk/guide/key)
     $cordova plugin add https://github.com/caobaohe/cordova-baiduLocation.git --variable API_KEY="<API_KEY>"
 
 ## Supported Platforms
