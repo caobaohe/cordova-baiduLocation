@@ -1,0 +1,27 @@
+{
+  "name": "cordova-baiduLocation",
+  "version": "1.0.0",
+  "description": "---\r title: cordova-baiduLocation\r description: cordova-plugin-geolocation定位在android上有时会定位失败，ios上会不稳定误差100米到2公里波动.\r ---",
+  "cordova": {
+    "id": "cordova.plugin.baidu.location",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caobaohe/cordova-baiduLocation.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caobaohe/cordova-baiduLocation/issues"
+  },
+  "homepage": "https://github.com/caobaohe/cordova-baiduLocation#readme"
+}
