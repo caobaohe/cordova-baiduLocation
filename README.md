@@ -25,4 +25,5 @@ description: cordova-plugin-geolocation定位在android上有时会定位失败�
               });
         }
 ## ios build失败
+<img width="150" height="450" src="https://raw.githubusercontent.com/satya164/react-native-tab-view/master/demo/demo.gif"/>
 ![image](https://raw.githubusercontent.com/satya164/react-native-tab-view/master/demo/demo.gif)
